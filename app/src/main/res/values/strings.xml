@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Material Chef</string>
     <string name="hello_world">Hello world!</string>
+    <string name="error">Oops…</string>
 </resources>

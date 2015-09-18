@@ -39,6 +39,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/show_message"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -46,6 +47,7 @@
             android:theme="@style/AppTheme.Button.Primary" />
 
         <Button
+            android:id="@+id/show_error"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
