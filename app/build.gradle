@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion '23.0.1'
+    buildToolsVersion '23.0.2'
 
     defaultConfig {
         applicationId 'net.rafaeltoledo.materialchef'
@@ -19,7 +19,7 @@ android {
     }
 }
 
-final SUPPORT_LIB_VERSION = '23.1.0'
+final SUPPORT_LIB_VERSION = '23.1.1'
 
 dependencies {
     compile "com.android.support:appcompat-v7:${SUPPORT_LIB_VERSION}"
