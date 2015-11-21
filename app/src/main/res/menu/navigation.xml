@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_pizza"
+            android:icon="@drawable/ic_local_pizza_black_24dp"
+            android:title="@string/nav_pizza" />
+        <item
+            android:id="@+id/nav_dining"
+            android:icon="@drawable/ic_local_dining_black_24dp"
+            android:title="@string/nav_dining" />
+        <item
+            android:id="@+id/nav_cafe"
+            android:icon="@drawable/ic_local_cafe_black_24dp"
+            android:title="@string/nav_cafe" />
+        <item
+            android:id="@+id/nav_bar"
+            android:icon="@drawable/ic_local_bar_black_24dp"
+            android:title="@string/nav_bar" />
+    </group>
+
+    <item android:title="@string/options">
+        <menu>
+            <item android:title="@string/settings" />
+            <item android:title="@string/about" />
+        </menu>
+    </item>
+
+</menu>

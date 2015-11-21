@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">Material Chef</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="error">Oops…</string>
+    <string name="nav_pizza">Pizza</string>
+    <string name="nav_dining">Dining</string>
+    <string name="nav_cafe">Café</string>
+    <string name="nav_bar">Bar</string>
+    <string name="options">Options</string>
+    <string name="about">About</string>
+    <string name="settings">Settings</string>
+    <string name="error">Oops!</string>
+    <string name="ok">OK</string>
+    <string name="action">Action</string>
 </resources>

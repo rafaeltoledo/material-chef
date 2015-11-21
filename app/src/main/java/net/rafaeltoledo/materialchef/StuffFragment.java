@@ -31,8 +31,8 @@ public class StuffFragment extends Fragment {
                 mMessageWrapper.setErrorEnabled(false);
                 new AlertDialog.Builder(getActivity())
                         .setTitle(R.string.error)
-                        .setMessage(R.string.hello_world)
-                        .setPositiveButton("OK", null)
+                        .setMessage(R.string.app_name)
+                        .setPositiveButton(R.string.ok, null)
                         .show();
             }
         });

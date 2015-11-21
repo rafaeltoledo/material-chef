@@ -14,7 +14,7 @@
             android:id="@+id/message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hello_world"
+            android:hint="@string/app_name"
             android:inputType="textEmailAddress" />
 
     </android.support.design.widget.TextInputLayout>
@@ -29,7 +29,7 @@
             android:id="@+id/other_message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hello_world"
+            android:hint="@string/app_name"
             android:inputType="textEmailAddress" />
 
     </android.support.design.widget.TextInputLayout>
@@ -45,16 +45,16 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/hello_world"
-            android:theme="@style/AppTheme.Button.Primary" />
+            android:text="@string/app_name"
+            android:theme="@style/MaterialChef.Button.Primary" />
 
         <Button
             android:id="@+id/show_error"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/hello_world"
-            android:theme="@style/AppTheme.Button.Accent" />
+            android:text="@string/app_name"
+            android:theme="@style/MaterialChef.Button.Accent" />
 
     </android.support.v7.widget.LinearLayoutCompat>
 
