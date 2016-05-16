@@ -8,9 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.ImageView;
-import android.widget.TextView;
-
-import java.util.Random;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -34,10 +31,14 @@ public class DetailActivity extends AppCompatActivity {
 
         CollapsingToolbarLayout collapsingToolbar =
                 (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
-        collapsingToolbar.setTitle(text);
+        if (collapsingToolbar != null) {
+            collapsingToolbar.setTitle(text);
+        }
 
         ImageView imageView = (ImageView) findViewById(R.id.backdrop);
-        imageView.setImageResource(image);
+        if (imageView != null) {
+            imageView.setImageResource(image);
+        }
         ViewCompat.setTransitionName(imageView, EXTRA_IMAGE);
     }
 

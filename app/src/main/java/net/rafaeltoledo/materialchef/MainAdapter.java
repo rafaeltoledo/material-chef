@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 
 public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder> {
 
@@ -30,7 +31,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder
         }
 
         String title = ITEMS.get(position % 5);
-        int image = context.getResources().getIdentifier(String.format("img_0%d", (position % 5) + 1),
+        int image = context.getResources().getIdentifier(String.format(Locale.US, "img_0%d", (position % 5) + 1),
                 "drawable", context.getPackageName());
 
         holder.itemView.setTag(R.id.title, title);

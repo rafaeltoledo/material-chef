@@ -30,39 +30,47 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.navigation);
-        navigationView.setNavigationItemSelectedListener(this);
+        if (navigationView != null) {
+            navigationView.setNavigationItemSelectedListener(this);
+        }
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        toolbar.setNavigationIcon(R.drawable.ic_menu_black_24dp);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                drawerLayout.openDrawer(GravityCompat.START);
-            }
-        });
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+            toolbar.setNavigationIcon(R.drawable.ic_menu_black_24dp);
+            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    drawerLayout.openDrawer(GravityCompat.START);
+                }
+            });
+        }
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         ViewPager viewPager = (ViewPager) findViewById(R.id.view_pager);
-        viewPager.setAdapter(new MainPagerAdapter(getSupportFragmentManager()));
-        tabLayout.setupWithViewPager(viewPager);
+        if (viewPager != null && tabLayout != null) {
+            viewPager.setAdapter(new MainPagerAdapter(getSupportFragmentManager()));
+            tabLayout.setupWithViewPager(viewPager);
+        }
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Snackbar.make(v, R.string.app_name, Snackbar.LENGTH_LONG)
-                        .setAction(R.string.action, new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
+        if (fab != null) {
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Snackbar.make(v, R.string.app_name, Snackbar.LENGTH_LONG)
+                            .setAction(R.string.action, new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
 
-                            }
-                        })
-                        .show();
-            }
-        });
+                                }
+                            })
+                            .show();
+                }
+            });
+        }
     }
 
     @Override
@@ -82,9 +90,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public void onClick(View v) {
-        Pair<View, String> p1 = new Pair<>(v.findViewById(R.id.image), DetailActivity.EXTRA_IMAGE);
-
-        ActivityOptionsCompat options = makeSceneTransitionAnimation(this, p1);
+        ActivityOptionsCompat options = makeSceneTransitionAnimation(this,
+                new Pair<>(v.findViewById(R.id.image), DetailActivity.EXTRA_IMAGE));
 
         Intent intent = new Intent(this, DetailActivity.class);
         intent.putExtra(DetailActivity.EXTRA_IMAGE, (Integer) v.getTag(R.id.image));
